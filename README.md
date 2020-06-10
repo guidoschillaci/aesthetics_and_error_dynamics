@@ -3,7 +3,7 @@
 ## Requirements
 
 ```
-pip install numpy pymc3 seaborn pickle
+pip install numpy pymc3 seaborn pickle matplotlib
 ```
 
 ## How to run

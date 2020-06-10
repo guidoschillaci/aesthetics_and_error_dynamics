@@ -7,6 +7,7 @@ import numpy as np
 import pymc3 as pm # bayesian modelling
 import arviz as az # bayesian visualisation
 import seaborn as sns; sns.set() # statistical data visualisation
+import matplotlib.pyplot as plt
 az.style.use("arviz-darkgrid") # style sheet
 from parameters import Parameters # parameters management
 
@@ -45,6 +46,12 @@ if __name__ == '__main__':
     # Generate samples.
     z = np.random.multivariate_normal(mean=mu, cov=sigma, size=m)
     z = z.T
+
+    # test polot
+    sns.jointplot(x=z[0], y=z[1], kind="kde", space=0, color='blue');
+
+    # save stuff
+    parameters.save() # it will save into directory_results
 
     #test_plot()
     print('end')
