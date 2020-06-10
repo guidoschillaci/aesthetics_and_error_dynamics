@@ -5,3 +5,8 @@
 ```
 pip install numpy pymc3 seaborn pickle
 ```
+
+## How to run
+
+```
+python main.py
